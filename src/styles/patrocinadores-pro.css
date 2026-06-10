@@ -1,0 +1,249 @@
+/* Patrocinadores — solo carrusel, colores Arena Pro */
+
+.web-public.patrocinadores-pagina {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 68px);
+  min-height: calc(100dvh - 68px);
+  background: var(--cf-navy-900);
+  padding: 0;
+}
+
+/* Cabecera compacta */
+.patro-solo-hero {
+  flex-shrink: 0;
+  text-align: center;
+  padding: clamp(28px, 4vh, 40px) clamp(20px, 4vw, 48px) clamp(16px, 2vh, 24px);
+  background: linear-gradient(180deg, var(--cf-navy-900) 0%, #0f2d3d 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.patro-solo-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  color: #6ee7b7;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.patro-solo-hero h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #ffffff !important;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.patro-solo-hero h1 em {
+  font-style: normal;
+  color: #34d399 !important;
+}
+
+/* Carrusel principal */
+.web-public.patrocinadores-pagina .patro-carousel--solo {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: min(520px, 55vh);
+  background: linear-gradient(145deg, #0a1628 0%, #0d3329 40%, #065f46 100%);
+  overflow: hidden;
+}
+
+.patro-carousel--solo .patro-carousel__slide {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  animation: patro-fade-in 0.4s ease;
+}
+
+@keyframes patro-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.patro-carousel--solo .patro-carousel__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(32px, 5vw, 64px);
+  background:
+    radial-gradient(circle at center, rgba(52, 211, 153, 0.15), transparent 60%),
+    rgba(0, 0, 0, 0.15);
+}
+
+.patro-carousel--solo .patro-carousel__initials {
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.12);
+  letter-spacing: 0.06em;
+  user-select: none;
+}
+
+.patro-carousel--solo .patro-carousel__logo {
+  max-width: min(280px, 70%);
+  max-height: 160px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.patro-carousel--solo .patro-carousel__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: clamp(32px, 5vw, 56px);
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.patro-carousel--solo .patro-carousel__count {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #6ee7b7 !important;
+}
+
+.patro-carousel--solo .patro-carousel__name,
+.patro-carousel--solo .patro-carousel__panel h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #ffffff !important;
+  text-transform: none;
+  letter-spacing: -0.02em;
+}
+
+.patro-carousel--solo .patro-carousel__tagline {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #34d399 !important;
+}
+
+.patro-carousel--solo .patro-carousel__desc {
+  margin: 4px 0 0;
+  max-width: 48ch;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.patro-carousel--solo .patro-carousel__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.patro-carousel--solo .patro-carousel__meta > span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.patro-carousel--solo .patro-carousel__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: var(--cf-brand-600) !important;
+  border: 1px solid var(--cf-brand-500) !important;
+  color: #fff !important;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.patro-carousel--solo .patro-carousel__link:hover {
+  background: var(--cf-brand-500) !important;
+}
+
+.patro-carousel--solo .patro-carousel__nav {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+
+.patro-carousel--solo .patro-carousel__nav:hover {
+  background: var(--cf-brand-600) !important;
+  border-color: var(--cf-brand-500) !important;
+}
+
+.patro-carousel--solo .patro-carousel__dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 22, 40, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.patro-carousel--solo .patro-carousel__dot {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.patro-carousel--solo .patro-carousel__dot--active {
+  background: #34d399 !important;
+}
+
+/* CTA compacto */
+.web-public.patrocinadores-pagina .patro-cta {
+  flex-shrink: 0;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  background: var(--cf-navy-900) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: clamp(24px, 3vh, 32px) clamp(20px, 4vw, 48px) !important;
+}
+
+.web-public.patrocinadores-pagina .patro-cta h2 {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+}
+
+.web-public.patrocinadores-pagina .patro-cta p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.web-public.patrocinadores-pagina .patro-eyebrow {
+  color: #6ee7b7 !important;
+}
+
+@media (max-width: 768px) {
+  .patro-carousel--solo .patro-carousel__slide {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .patro-carousel--solo .patro-carousel__visual {
+    min-height: 140px;
+    padding: 24px;
+  }
+
+  .patro-carousel--solo .patro-carousel__panel {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}

@@ -1,0 +1,154 @@
+.equipos-explorer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.equipos-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.equipos-picker__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--cf-gray-200);
+  background: #fff;
+  cursor: pointer;
+  transition: 0.15s ease;
+  min-width: 140px;
+}
+
+.equipos-picker__btn:hover {
+  border-color: var(--cf-brand-300);
+  background: var(--cf-brand-50);
+}
+
+.equipos-picker__btn--active {
+  border-color: var(--cf-brand-500);
+  background: var(--cf-brand-50);
+  box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.15);
+}
+
+.equipos-picker__name {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--cf-navy-900);
+}
+
+.equipos-picker__cat {
+  font-size: 0.75rem;
+  color: var(--cf-gray-500);
+  font-weight: 600;
+}
+
+.equipos-detail-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.equipos-detail-header h2 {
+  margin: 0 0 4px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--cf-navy-900);
+}
+
+.equipos-detail-coach {
+  margin: 8px 0 0;
+  font-size: 0.88rem;
+  color: var(--cf-brand-700);
+  font-weight: 600;
+}
+
+.equipos-stats-card {
+  background: linear-gradient(135deg, var(--cf-navy-900), var(--cf-brand-800));
+  color: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  min-width: 280px;
+}
+
+.equipos-stats-card__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.equipos-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.equipos-stats-grid strong {
+  display: block;
+  font-size: 1.25rem;
+}
+
+.equipos-stats-grid span {
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+
+.equipos-racha {
+  margin: 12px 0 0;
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.equipos-partidos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.equipos-partido-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--cf-gray-200);
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.15s ease;
+}
+
+.equipos-partido-link:hover {
+  border-color: var(--cf-brand-300);
+  background: var(--cf-brand-50);
+}
+
+.equipos-partido-link strong {
+  color: var(--cf-brand-700);
+}
+
+.equipos-loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--cf-gray-500);
+}
+
+.partido-empty {
+  color: var(--cf-gray-500);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .equipos-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

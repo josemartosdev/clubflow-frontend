@@ -1,0 +1,342 @@
+/* Historia del club — diseño editorial a pantalla completa */
+
+.web-public--historia {
+  background: var(--cf-gray-50);
+}
+
+.web-public--historia .historia-pagina {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.web-public--historia .historia-hero {
+  background: linear-gradient(165deg, var(--cf-navy-900) 0%, #0f4c3a 55%, var(--cf-brand-800) 100%) !important;
+  padding: clamp(40px, 7vh, 72px) clamp(16px, 4vw, 48px) clamp(32px, 5vh, 48px) !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.web-public--historia .historia-hero--full .historia-hero__shell {
+  max-width: none;
+  width: 100%;
+}
+
+.web-public--historia .historia-hero--full .historia-hero__story {
+  max-width: 800px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.web-public--historia .historia-hero__stats {
+  max-width: 640px;
+}
+
+.web-public--historia .historia-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.03em !important;
+  text-transform: none !important;
+  color: #fff !important;
+}
+
+.web-public--historia .historia-hero__lead {
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  max-width: 560px;
+}
+
+.web-public--historia .historia-hero__eyebrow {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: var(--cf-brand-300, #6ee7b7) !important;
+}
+
+.web-public--historia .historia-panel {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(8px);
+  color: #fff;
+}
+
+.web-public--historia .historia-panel h2,
+.web-public--historia .historia-panel h3 {
+  color: #fff !important;
+}
+
+.web-public--historia .historia-panel p {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.web-public--historia .historia-panel--accent {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(14, 165, 233, 0.15)) !important;
+  border-color: rgba(52, 211, 153, 0.35) !important;
+}
+
+.web-public--historia .historia-stat-card {
+  background: #fff !important;
+  border-radius: 16px !important;
+  padding: 1.25rem !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+  border: none !important;
+}
+
+.web-public--historia .historia-stat-card strong {
+  font-size: 1.75rem !important;
+  color: var(--cf-brand-600) !important;
+}
+
+.web-public--historia .historia-stat-card span {
+  color: var(--cf-gray-600) !important;
+  font-size: 0.78rem !important;
+}
+
+/* Stack de módulos */
+.web-public--historia .historia-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: clamp(24px, 4vh, 40px) clamp(16px, 4vw, 48px) clamp(40px, 6vh, 64px) !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.historia-section--full {
+  width: 100%;
+}
+
+.historia-objectives-pro {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: var(--cf-brand-50);
+  border: 1px solid var(--cf-brand-100);
+}
+
+.historia-objectives-pro h3 {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--cf-navy-900);
+}
+
+.historia-objectives-pro__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+
+.historia-objectives-pro__list li {
+  padding: 10px 14px;
+  background: #fff;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  color: var(--cf-gray-700);
+  line-height: 1.5;
+  border: 1px solid var(--cf-gray-200);
+}
+
+.historia-objectives-pro__list li::before {
+  content: "✓ ";
+  color: var(--cf-brand-600);
+  font-weight: 800;
+}
+
+.historia-timeline-pro {
+  background: #fff;
+  border-radius: 24px;
+  padding: clamp(28px, 4vw, 40px);
+  border: 1px solid var(--cf-gray-200);
+  box-shadow: var(--cf-shadow-md);
+}
+
+.historia-timeline-pro__header {
+  margin-bottom: 2rem;
+}
+
+.historia-timeline-pro__header .module__eyebrow {
+  color: var(--cf-brand-600);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.historia-timeline-pro__header h2 {
+  margin: 8px 0 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--cf-navy-900);
+}
+
+.historia-timeline-pro__track {
+  position: relative;
+  padding-left: 32px;
+}
+
+.historia-timeline-pro__track::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background: linear-gradient(180deg, var(--cf-brand-500), var(--cf-navy-400));
+  border-radius: 999px;
+}
+
+.historia-timeline-pro__item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.historia-timeline-pro__item:last-child {
+  padding-bottom: 0;
+}
+
+.historia-timeline-pro__dot {
+  position: absolute;
+  left: -32px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--cf-brand-500);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--cf-brand-200);
+}
+
+.historia-timeline-pro__year {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: var(--cf-brand-50);
+  color: var(--cf-brand-700);
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.historia-timeline-pro__item h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--cf-navy-900);
+}
+
+.historia-timeline-pro__item p {
+  margin: 0;
+  color: var(--cf-gray-600);
+  line-height: 1.65;
+}
+
+/* Palmarés grid */
+.historia-logros-pro {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.historia-logro-pro {
+  background: #fff;
+  border: 1px solid var(--cf-gray-200);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.historia-logro-pro::before {
+  content: "🏆";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 1.5rem;
+  opacity: 0.35;
+}
+
+.historia-logro-pro:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--cf-shadow-md);
+  border-color: var(--cf-brand-200);
+}
+
+.historia-logro-pro__year {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--cf-brand-600);
+  letter-spacing: 0.08em;
+}
+
+.historia-logro-pro h3 {
+  margin: 8px 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--cf-navy-900);
+}
+
+.historia-logro-pro p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cf-gray-600);
+  line-height: 1.55;
+}
+
+/* Categorías equipos */
+.historia-teams-pro {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.historia-team-pro {
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: linear-gradient(145deg, var(--cf-brand-50), #fff);
+  border: 1px solid var(--cf-brand-100);
+}
+
+.historia-team-pro h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--cf-navy-800);
+}
+
+.historia-team-pro p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--cf-gray-600);
+}
+
+.historia-module-pro {
+  background: #fff;
+  border-radius: 24px;
+  padding: clamp(28px, 4vw, 40px);
+  border: 1px solid var(--cf-gray-200);
+  box-shadow: var(--cf-shadow-sm);
+}
+
+.historia-module-pro__header {
+  margin-bottom: 1.5rem;
+}
+
+.historia-module-pro__header h2 {
+  margin: 8px 0 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--cf-navy-900);
+}
+
+.historia-module-pro__intro {
+  color: var(--cf-gray-600);
+  line-height: 1.65;
+  margin: 0 0 1.5rem;
+}

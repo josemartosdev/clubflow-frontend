@@ -1,0 +1,185 @@
+/**
+ * Clubflow — capa de tema unificada (sobreescribe restos de App.css)
+ */
+
+/* Cabecera */
+.cabecera {
+  background: var(--cf-header-bg) !important;
+  box-shadow: var(--cf-header-shadow) !important;
+  border-bottom: 1px solid var(--cf-header-border) !important;
+}
+
+.cabecera::after {
+  background: linear-gradient(90deg, transparent, var(--cf-brand-400), transparent) !important;
+  opacity: 0.5;
+}
+
+.cabecera__title { color: var(--cf-navy-800) !important; }
+.cabecera__tagline { color: var(--cf-gray-500) !important; }
+.nav__btn { color: var(--cf-gray-600) !important; }
+.nav__btn::after { background: var(--cf-brand-500) !important; }
+.nav__btn:hover { color: var(--cf-brand-700) !important; background: var(--cf-header-nav-hover) !important; }
+.nav__btn--active { color: var(--cf-brand-700) !important; background: var(--cf-header-nav-active) !important; }
+.cabecera__cta {
+  background: var(--cf-brand-600) !important;
+  box-shadow: var(--cf-shadow-brand) !important;
+}
+.cabecera__cta:hover { background: var(--cf-brand-700) !important; }
+.cabecera__hamburger span { background: var(--cf-navy-700) !important; }
+
+@media (max-width: 860px) {
+  .cabecera__nav {
+    background: #fff !important;
+    border-top: 1px solid var(--cf-gray-200) !important;
+    box-shadow: var(--cf-shadow-lg) !important;
+  }
+}
+
+/* Hero */
+.hero { background: var(--cf-hero-bg) !important; color: var(--cf-hero-text) !important; }
+.hero__eyebrow {
+  background: var(--cf-brand-100) !important;
+  border-color: var(--border-accent) !important;
+  color: var(--cf-brand-700) !important;
+}
+.hero__title { color: var(--cf-hero-text) !important; }
+.hero__title em { color: var(--cf-hero-em) !important; }
+.hero__sub { color: var(--cf-hero-text-muted) !important; }
+.hero__stats {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-top-color: var(--cf-gray-200) !important;
+}
+.hero__stat { border-right-color: var(--cf-gray-200) !important; }
+.hero__stat:hover { background: var(--cf-brand-50) !important; }
+.hero__stat strong { color: var(--cf-brand-600) !important; }
+.hero__stat span { color: var(--cf-gray-500) !important; }
+
+/* Botones */
+.btn-primary {
+  background: var(--cf-brand-600) !important;
+  box-shadow: var(--cf-shadow-brand) !important;
+}
+.btn-primary:hover { background: var(--cf-brand-700) !important; }
+.btn-ghost, .btn-secondary {
+  color: var(--cf-brand-700) !important;
+  border-color: var(--cf-brand-200) !important;
+}
+.btn-ghost:hover, .btn-secondary:hover {
+  background: var(--cf-brand-50) !important;
+  border-color: var(--cf-brand-500) !important;
+}
+
+/* Footer */
+.footer {
+  background: var(--cf-footer-bg) !important;
+  border-top: 3px solid var(--cf-brand-500) !important;
+}
+.footer-title { color: var(--cf-footer-accent) !important; }
+.newsletter-btn { background: var(--cf-brand-600) !important; }
+.newsletter-btn:hover { background: var(--cf-brand-500) !important; }
+
+/* Eyebrows / kickers */
+.home-eyebrow, .module__eyebrow, .pagina-header__eyebrow,
+.equipos-section__eyebrow, .resultados-card__eyebrow, .directo-card__eyebrow,
+.cartelera-tag, .patro-eyebrow, .historia-hero__eyebrow, .historia-panel__tag,
+.gestion-page__kicker {
+  color: var(--cf-brand-600) !important;
+}
+
+.home-module__link { color: var(--cf-brand-600) !important; }
+.noticia-cat { color: var(--cf-brand-600) !important; }
+
+/* Scoreboard / cartelera / heroes oscuros */
+.scoreboard-section, .cartelera-partido, .historia-hero, .patro-hero {
+  background: var(--cf-dark-gradient) !important;
+}
+
+.scoreboard-card--loss { border-left-color: var(--cf-danger) !important; }
+.scoreboard-badge--loss { background: var(--cf-danger-soft) !important; color: var(--cf-danger) !important; }
+.scoreboard-badge--win { background: var(--cf-success-soft) !important; color: var(--cf-success) !important; }
+.scoreboard-score { color: var(--cf-brand-400) !important; }
+
+/* Páginas públicas */
+.web-public .pagina-estandar {
+  background: linear-gradient(180deg, var(--cf-brand-50) 0%, #fff 40%, var(--cf-gray-50) 100%) !important;
+}
+.web-public.patrocinadores-pagina { background: var(--cf-gray-50) !important; }
+
+.web-public .patro-carousel__count,
+.web-public .patro-carousel__tagline,
+.web-public .patro-carousel__thumb--active { color: var(--cf-brand-600) !important; }
+.web-public .patro-carousel__link,
+.web-public .patro-carousel__nav:hover,
+.web-public .patro-carousel__dot--active {
+  background: var(--cf-brand-600) !important;
+  border-color: var(--cf-brand-600) !important;
+}
+.web-public .patro-carousel__thumb--active { background: var(--cf-brand-50) !important; }
+
+/* —— GESTIÓN: sidebar claro —— */
+.gestion-shell {
+  background: var(--cf-gestion-bg) !important;
+}
+
+.gestion-sidebar {
+  background: var(--cf-sidebar-bg) !important;
+  border-right: 1px solid var(--cf-sidebar-border) !important;
+  box-shadow: var(--cf-sidebar-shadow) !important;
+}
+
+.gestion-sidebar::before { display: none !important; }
+
+.gestion-sidebar__brand strong { color: var(--cf-navy-800) !important; }
+.gestion-sidebar__eyebrow { color: var(--cf-brand-600) !important; }
+.gestion-sidebar__logo { border-color: var(--cf-gray-200) !important; }
+
+.gestion-nav__link {
+  color: var(--cf-sidebar-text) !important;
+  border: 1px solid transparent !important;
+}
+
+.gestion-nav__link:hover {
+  background: var(--cf-gray-50) !important;
+  color: var(--cf-navy-800) !important;
+}
+
+.gestion-nav__link--active {
+  background: var(--cf-sidebar-active-bg) !important;
+  color: var(--cf-sidebar-active-text) !important;
+  border-color: var(--cf-brand-200) !important;
+  border-left: 3px solid var(--cf-sidebar-active-border) !important;
+  box-shadow: var(--cf-shadow-sm) !important;
+}
+
+.gestion-sidebar__footer { border-top-color: var(--cf-gray-200) !important; }
+.gestion-user { color: var(--cf-navy-800) !important; }
+.gestion-user span { color: var(--cf-gray-500) !important; }
+.gestion-user__role { color: var(--cf-brand-600) !important; }
+.gestion-sidebar__btn, .gestion-sidebar__link { color: var(--cf-gray-600) !important; }
+.gestion-sidebar__btn:hover, .gestion-sidebar__link:hover { color: var(--cf-brand-700) !important; }
+
+.gestion-panel {
+  background: #fff !important;
+  border-color: var(--cf-gray-200) !important;
+  box-shadow: var(--cf-shadow-md) !important;
+}
+
+.gestion-btn--primary, .gestion-btn--save {
+  background: var(--cf-brand-600) !important;
+  box-shadow: var(--cf-shadow-brand) !important;
+}
+.gestion-btn--primary:hover, .gestion-btn--save:hover {
+  background: var(--cf-brand-700) !important;
+}
+
+.gestion-stat-card__value { color: var(--cf-brand-600) !important; }
+.gestion-chart-card__bar { background: var(--cf-brand-500) !important; }
+.gestion-dashboard-hero {
+  background: linear-gradient(135deg, #fff 0%, var(--cf-brand-50) 100%) !important;
+  border-color: var(--cf-gray-200) !important;
+}
+
+.patro-btn--primary { background: var(--cf-brand-600) !important; }
+.historial-estado.is-win { color: var(--cf-success) !important; }
+.historial-estado.is-loss { color: var(--cf-danger) !important; }
+.highlight-row { background: var(--cf-brand-50) !important; }

@@ -1,0 +1,121 @@
+/**
+ * Clubflow FC — Paleta "Arena Pro" (tema claro, fútbol profesional)
+ * Una sola fuente de verdad para TODOS los colores de la app.
+ */
+:root {
+  /* Marca — verde césped */
+  --cf-brand-50: #ecfdf5;
+  --cf-brand-100: #d1fae5;
+  --cf-brand-200: #a7f3d0;
+  --cf-brand-400: #34d399;
+  --cf-brand-500: #10b981;
+  --cf-brand-600: #059669;
+  --cf-brand-700: #047857;
+  --cf-brand-800: #065f46;
+  --cf-brand-900: #064e3b;
+
+  /* Autoridad — azul marino (contraste con CV Berja) */
+  --cf-navy-50: #f0f4f8;
+  --cf-navy-100: #d9e2ec;
+  --cf-navy-500: #486581;
+  --cf-navy-700: #243b53;
+  --cf-navy-800: #1e3a5f;
+  --cf-navy-900: #102a43;
+
+  /* Acento cielo */
+  --cf-sky-400: #38bdf8;
+  --cf-sky-500: #0ea5e9;
+  --cf-sky-600: #0284c7;
+
+  /* Ámbar premium */
+  --cf-amber-400: #fbbf24;
+  --cf-amber-500: #f59e0b;
+
+  /* Neutros */
+  --cf-gray-50: #f9fafb;
+  --cf-gray-100: #f3f4f6;
+  --cf-gray-200: #e5e7eb;
+  --cf-gray-300: #d1d5db;
+  --cf-gray-400: #9ca3af;
+  --cf-gray-500: #6b7280;
+  --cf-gray-600: #4b5563;
+  --cf-gray-700: #374151;
+  --cf-gray-900: #111827;
+
+  /* Semánticos */
+  --cf-success: #059669;
+  --cf-success-soft: #d1fae5;
+  --cf-warning: #d97706;
+  --cf-warning-soft: #fef3c7;
+  --cf-danger: #dc2626;
+  --cf-danger-soft: #fee2e2;
+  --cf-info: #0284c7;
+
+  /* Alias App.css */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: var(--cf-gray-50);
+  --surface-elevated: #ffffff;
+  --text: var(--cf-gray-900);
+  --text-muted: var(--cf-gray-500);
+  --text-h: var(--cf-navy-900);
+  --accent: var(--cf-brand-600);
+  --accent-strong: var(--cf-brand-700);
+  --accent-soft: var(--cf-brand-100);
+  --accent-muted: rgba(5, 150, 105, 0.1);
+  --accent-black: var(--cf-navy-900);
+  --highlight: var(--cf-amber-500);
+  --border: var(--cf-gray-200);
+  --border-accent: rgba(5, 150, 105, 0.25);
+
+  /* Cabecera — blanca limpia */
+  --cf-header-bg: #ffffff;
+  --cf-header-border: var(--cf-gray-200);
+  --cf-header-text: var(--cf-navy-800);
+  --cf-header-text-muted: var(--cf-gray-500);
+  --cf-header-nav-hover: var(--cf-brand-50);
+  --cf-header-nav-active: var(--cf-brand-100);
+  --cf-header-shadow: 0 1px 0 var(--cf-gray-200), 0 8px 30px rgba(16, 42, 67, 0.06);
+
+  /* Hero — claro con toque verde */
+  --cf-hero-bg: linear-gradient(165deg, var(--cf-brand-50) 0%, #ffffff 42%, var(--cf-navy-50) 100%);
+  --cf-hero-text: var(--cf-navy-900);
+  --cf-hero-text-muted: var(--cf-gray-600);
+  --cf-hero-em: var(--cf-brand-600);
+
+  /* Footer — navy profesional */
+  --cf-footer-bg: linear-gradient(180deg, var(--cf-navy-800) 0%, var(--cf-navy-900) 100%);
+  --cf-footer-text: #ffffff;
+  --cf-footer-text-muted: rgba(255, 255, 255, 0.7);
+  --cf-footer-accent: var(--cf-brand-400);
+
+  /* Bloques destacados oscuros */
+  --cf-dark-gradient: linear-gradient(135deg, var(--cf-navy-800) 0%, var(--cf-navy-700) 45%, var(--cf-brand-800) 100%);
+
+  /* Gestión — sidebar CLARO */
+  --cf-gestion-bg: var(--cf-gray-50);
+  --cf-sidebar-bg: #ffffff;
+  --cf-sidebar-border: var(--cf-gray-200);
+  --cf-sidebar-text: var(--cf-gray-700);
+  --cf-sidebar-text-muted: var(--cf-gray-500);
+  --cf-sidebar-active-bg: var(--cf-brand-50);
+  --cf-sidebar-active-text: var(--cf-brand-700);
+  --cf-sidebar-active-border: var(--cf-brand-500);
+  --cf-sidebar-shadow: 4px 0 24px rgba(16, 42, 67, 0.06);
+
+  /* Sombras */
+  --cf-shadow-sm: 0 1px 2px rgba(16, 42, 67, 0.05);
+  --cf-shadow-md: 0 4px 24px rgba(16, 42, 67, 0.08);
+  --cf-shadow-lg: 0 16px 48px rgba(16, 42, 67, 0.1);
+  --cf-shadow-brand: 0 4px 20px rgba(5, 150, 105, 0.25);
+
+  /* Radios */
+  --cf-radius-sm: 10px;
+  --cf-radius-md: 14px;
+  --cf-radius-lg: 20px;
+  --cf-radius-xl: 24px;
+
+  --heading: "Geist Variable", "Inter", "Segoe UI", sans-serif;
+  --mono: "Courier New", Courier, monospace;
+  --web-pad-x: clamp(16px, 4vw, 48px);
+}

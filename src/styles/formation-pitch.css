@@ -1,0 +1,209 @@
+/* Campo táctico — convocatoria 4-3-3 */
+
+.formation-pitch {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.formation-pitch--compact {
+  max-width: 320px;
+}
+
+.formation-pitch__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
+
+.formation-pitch__badge {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--cf-brand-600);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.formation-pitch__title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--cf-gray-500);
+}
+
+.formation-pitch__field {
+  position: relative;
+  aspect-ratio: 68 / 105;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #2d9b5e 0%, #1a7f4a 35%, #157a40 65%, #1a8a4e 100%);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.35),
+    0 12px 40px rgba(5, 150, 105, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6% 4% 5%;
+}
+
+.formation-pitch__lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.formation-pitch__half-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.formation-pitch__center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+}
+
+.formation-pitch__box {
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  height: 16%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.formation-pitch__box--top { top: 0; border-top: none; }
+.formation-pitch__box--bottom { bottom: 0; border-bottom: none; }
+
+.formation-pitch__row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(6px, 3vw, 14px);
+  flex: 1;
+}
+
+.formation-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+
+.formation-player__shirt {
+  position: relative;
+  width: clamp(40px, 10vw, 52px);
+  height: clamp(40px, 10vw, 52px);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffffff 0%, #e8f5ec 100%);
+  border: 2px solid var(--cf-navy-800);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.formation-player__icon {
+  color: var(--cf-navy-700);
+  opacity: 0.35;
+  position: absolute;
+  top: 6px;
+}
+
+.formation-player:hover .formation-player__shirt {
+  transform: scale(1.08);
+}
+
+.formation-player__dorsal {
+  font-size: clamp(0.75rem, 2.2vw, 0.9rem);
+  font-weight: 900;
+  color: var(--cf-navy-800);
+  line-height: 1;
+  margin-top: 10px;
+}
+
+.formation-player__name {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  max-width: 56px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.formation-player__role {
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.formation-pitch--empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--cf-gray-500);
+  background: var(--cf-gray-50);
+  border-radius: 16px;
+  border: 1px dashed var(--cf-gray-300);
+}
+
+.formation-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.formation-picker__btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--cf-gray-200);
+  background: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cf-gray-600);
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.formation-picker__btn:hover {
+  border-color: var(--cf-brand-400);
+  color: var(--cf-brand-700);
+}
+
+.formation-picker__btn--active {
+  background: var(--cf-brand-600);
+  border-color: var(--cf-brand-600);
+  color: #fff;
+}
+
+.gestion-tactic-card__pitch-wrap {
+  margin: 16px 0;
+  padding: 16px;
+  background: var(--cf-gray-50);
+  border-radius: 20px;
+  border: 1px solid var(--cf-gray-200);
+}

@@ -1,0 +1,206 @@
+/* Web pública — layout + tema Arena Pro */
+
+.app-shell {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--cf-gray-50);
+}
+
+.web-public {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.web-public--home,
+.web-public--historia,
+.web-public--patro,
+.web-public .inicio,
+.web-public .pagina-estandar,
+.web-public .historia-pagina,
+.web-public.patrocinadores-pagina {
+  width: 100%;
+  max-width: none;
+}
+
+.cabecera__inner,
+.footer-inner {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: clamp(16px, 4vw, 48px);
+  padding-right: clamp(16px, 4vw, 48px);
+  box-sizing: border-box;
+}
+
+.footer { width: 100%; }
+
+.hero__inner,
+.hero__stats {
+  max-width: none;
+  width: 100%;
+  padding-left: clamp(20px, 4vw, 48px);
+  padding-right: clamp(20px, 4vw, 48px);
+  box-sizing: border-box;
+}
+
+.historia-hero__shell {
+  max-width: none;
+  width: 100%;
+  padding-left: clamp(16px, 4vw, 48px);
+  padding-right: clamp(16px, 4vw, 48px);
+  box-sizing: border-box;
+}
+
+.web-public .home-modules {
+  background: var(--cf-gray-50);
+}
+
+.web-public .noticias-section,
+.web-public .social-section,
+.web-public .home-module {
+  max-width: none;
+  width: 100%;
+  padding-left: clamp(20px, 4vw, 48px);
+  padding-right: clamp(20px, 4vw, 48px);
+  box-sizing: border-box;
+}
+
+.web-public .noticias-section,
+.web-public .social-section,
+.web-public .home-module--sponsors {
+  background: #ffffff;
+}
+
+.web-public .home-module--sponsors {
+  border-top: 1px solid var(--cf-gray-200);
+  border-bottom: 1px solid var(--cf-gray-200);
+}
+
+.web-public .scoreboard-section {
+  width: 100%;
+  padding-left: clamp(20px, 4vw, 48px);
+  padding-right: clamp(20px, 4vw, 48px);
+  box-sizing: border-box;
+}
+
+.web-public .scoreboard-header,
+.web-public .scoreboard-grid {
+  max-width: none;
+  width: 100%;
+}
+
+.web-public .pagina-estandar {
+  max-width: none;
+  width: 100%;
+  padding: clamp(32px, 5vh, 56px) clamp(16px, 4vw, 48px) clamp(48px, 8vh, 88px);
+  box-sizing: border-box;
+  background: linear-gradient(180deg, var(--cf-brand-50) 0%, #ffffff 35%, var(--cf-gray-50) 100%);
+}
+
+.web-public .equipos-section,
+.web-public .historia-panel--light,
+.web-public .historia-info-card,
+.web-public .historia-team-card,
+.web-public .historia-goals-card {
+  background: #ffffff;
+}
+
+.web-public .historia-stack {
+  width: 100%;
+  max-width: none;
+  padding-left: clamp(16px, 4vw, 48px);
+  padding-right: clamp(16px, 4vw, 48px);
+  box-sizing: border-box;
+}
+
+.web-public .patro-carousel__content {
+  background: #ffffff;
+  border-left: 1px solid var(--cf-gray-200);
+}
+
+.web-public .patro-carousel__media-shade {
+  background: linear-gradient(90deg, transparent 42%, rgba(255, 255, 255, 0.97) 100%);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__count { color: var(--cf-brand-600); }
+.web-public:not(.patrocinadores-pagina) .patro-carousel__content h2 { color: var(--cf-gray-900); }
+.web-public:not(.patrocinadores-pagina) .patro-carousel__tagline { color: var(--cf-brand-600); }
+.web-public:not(.patrocinadores-pagina) .patro-carousel__desc { color: var(--cf-gray-600); }
+.web-public:not(.patrocinadores-pagina) .patro-carousel__meta { border-top-color: var(--cf-gray-200); }
+.web-public:not(.patrocinadores-pagina) .patro-carousel__meta > span { color: var(--cf-gray-500); }
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__link {
+  background: var(--cf-brand-600);
+  border-color: var(--cf-brand-600);
+  color: #ffffff;
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__thumbs {
+  background: #ffffff;
+  border-top: 1px solid var(--cf-gray-200);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__thumb {
+  color: var(--cf-gray-600);
+  border-right-color: var(--cf-gray-100);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__thumb--active {
+  color: var(--cf-brand-700);
+  background: var(--cf-brand-50);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__thumb:hover {
+  color: var(--cf-gray-900);
+  background: var(--cf-gray-50);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__nav {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--cf-gray-200);
+  color: var(--cf-gray-700);
+  box-shadow: var(--cf-shadow-md);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__nav:hover {
+  background: var(--cf-brand-600);
+  border-color: var(--cf-brand-600);
+  color: #ffffff;
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__dots {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--cf-gray-200);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__dot { background: var(--cf-gray-300); }
+.web-public:not(.patrocinadores-pagina) .patro-carousel__dot--active { background: var(--cf-brand-600); }
+
+@media (max-width: 1024px) {
+  .web-public .patro-carousel__slide {
+    grid-template-rows: min(42vh, 420px) auto;
+  }
+  .web-public .patro-carousel__media-shade {
+    background: linear-gradient(180deg, transparent 40%, rgba(255, 255, 255, 0.97) 100%);
+  }
+  .web-public .patro-carousel__content {
+    border-left: none;
+    border-top: 1px solid var(--cf-gray-200);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+  .hero__stats { grid-template-columns: repeat(2, 1fr); }
+  .hero__stat:nth-child(2) { border-right: none; }
+}

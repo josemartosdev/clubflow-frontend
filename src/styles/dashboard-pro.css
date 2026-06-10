@@ -1,0 +1,179 @@
+/* Dashboard — diseño diferencial y vibrante */
+
+.gestion-page--dashboard {
+  --dash-grad: linear-gradient(135deg, #064e3b 0%, #1e3a5f 50%, #047857 100%);
+}
+
+.gestion-dashboard-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--dash-grad) !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 20px 50px rgba(6, 78, 59, 0.35) !important;
+  padding: 2rem 2rem 2.25rem !important;
+}
+
+.gestion-dashboard-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(52, 211, 153, 0.35), transparent 45%),
+    radial-gradient(circle at 10% 80%, rgba(14, 165, 233, 0.2), transparent 40%);
+  pointer-events: none;
+}
+
+.gestion-dashboard-hero > * {
+  position: relative;
+}
+
+.gestion-dashboard-hero .gestion-page__kicker {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.gestion-dashboard-hero h1 {
+  color: #fff !important;
+  font-size: clamp(1.75rem, 4vw, 2.35rem) !important;
+  letter-spacing: -0.02em;
+}
+
+.gestion-dashboard-hero p {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.gestion-dashboard-hero .gestion-btn--primary {
+  background: #fff !important;
+  color: var(--cf-brand-800) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.gestion-dashboard-hero .gestion-btn--primary:hover {
+  background: var(--cf-brand-50) !important;
+  transform: translateY(-2px);
+}
+
+.gestion-dashboard-hero .gestion-btn--ghost {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: #fff !important;
+}
+
+.gestion-dashboard-hero .gestion-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+}
+
+/* KPIs con color */
+.gestion-page--dashboard .gestion-kpi {
+  border: 1px solid var(--cf-gray-200);
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: var(--cf-shadow-sm);
+  overflow: hidden;
+  position: relative;
+}
+
+.gestion-page--dashboard .gestion-kpi::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--cf-brand-500);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.gestion-page--dashboard .gestion-kpi--red::after { background: var(--cf-brand-500); }
+.gestion-page--dashboard .gestion-kpi--dark::after { background: var(--cf-navy-700); }
+.gestion-page--dashboard .gestion-kpi--green::after { background: #10b981; }
+.gestion-page--dashboard .gestion-kpi--amber::after { background: var(--cf-amber-500); }
+
+.gestion-page--dashboard .gestion-kpi:hover::after {
+  opacity: 1;
+}
+
+.gestion-page--dashboard .gestion-kpi:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(5, 150, 105, 0.15) !important;
+  border-color: var(--cf-brand-200);
+}
+
+.gestion-page--dashboard .gestion-kpi__icon {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 14px !important;
+}
+
+.gestion-page--dashboard .gestion-kpi--red .gestion-kpi__icon {
+  background: linear-gradient(135deg, var(--cf-brand-100), var(--cf-brand-50)) !important;
+  color: var(--cf-brand-700) !important;
+}
+
+.gestion-page--dashboard .gestion-kpi--dark .gestion-kpi__icon {
+  background: linear-gradient(135deg, var(--cf-navy-100), var(--cf-navy-50)) !important;
+  color: var(--cf-navy-800) !important;
+}
+
+.gestion-page--dashboard .gestion-kpi--green .gestion-kpi__icon {
+  background: linear-gradient(135deg, #d1fae5, #ecfdf5) !important;
+  color: #047857 !important;
+}
+
+.gestion-page--dashboard .gestion-kpi--amber .gestion-kpi__icon {
+  background: linear-gradient(135deg, #fef3c7, #fffbeb) !important;
+  color: #b45309 !important;
+}
+
+.gestion-page--dashboard .gestion-kpi strong {
+  font-size: 1.65rem !important;
+  background: linear-gradient(135deg, var(--cf-navy-900), var(--cf-brand-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gestion-page--dashboard .gestion-chart-card {
+  border-radius: 20px !important;
+  border: 1px solid var(--cf-gray-200) !important;
+  background: #fff !important;
+  transition: box-shadow 0.2s ease;
+}
+
+.gestion-page--dashboard .gestion-chart-card:hover {
+  box-shadow: var(--cf-shadow-md) !important;
+}
+
+.gestion-page--dashboard .gestion-charts-grid {
+  gap: 1.25rem;
+}
+
+.dashboard-quick-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.dashboard-quick-bar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--cf-gray-200);
+  color: var(--cf-gray-700);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.15s ease;
+}
+
+.dashboard-quick-bar a:hover {
+  border-color: var(--cf-brand-400);
+  color: var(--cf-brand-700);
+  background: var(--cf-brand-50);
+}

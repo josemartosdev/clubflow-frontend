@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="pitch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="520" rx="24" fill="url(#bg)"/>
+  <rect x="40" y="140" width="720" height="340" rx="12" fill="url(#pitch)" opacity="0.9"/>
+  <rect x="60" y="160" width="680" height="300" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3"/>
+  <line x1="400" y1="160" x2="400" y2="460" stroke="rgba(255,255,255,0.7)" stroke-width="3"/>
+  <circle cx="400" cy="310" r="55" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="3"/>
+  <circle cx="400" cy="310" r="5" fill="#fff"/>
+  <text x="400" y="90" text-anchor="middle" fill="#102a43" font-family="Arial,sans-serif" font-size="22" font-weight="800" letter-spacing="3">CLUBFLOW FC</text>
+  <text x="400" y="118" text-anchor="middle" fill="#6b7280" font-family="Arial,sans-serif" font-size="13">Formaci�n � Competici�n � Pasi�n</text>
+</svg>
