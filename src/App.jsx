@@ -26,6 +26,7 @@ import PlayerOnlyRoute from "./components/gestion/PlayerOnlyRoute";
 import MiFichaPage from "./pages/gestion/MiFichaPage";
 import './App.css'
 import './styles/public-web.css'
+import './styles/public-revamp.css'
 import './styles/clubflow-theme.css'
 import './styles/login.css'
 import './styles/views-pro.css'

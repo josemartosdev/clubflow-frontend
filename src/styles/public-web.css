@@ -1,11 +1,24 @@
-/* Web pública — layout + tema Arena Pro */
+/* Public website visual refresh */
+
+:root {
+  --cf-public-shell: #f4f7f8;
+  --cf-public-accent: #0f766e;
+  --cf-public-line: rgba(15, 23, 42, 0.08);
+  --cf-public-surface: #ffffff;
+  --cf-public-surface-soft: #f8fafb;
+  --cf-public-shadow: 0 14px 34px rgba(15, 23, 42, 0.09);
+  --cf-public-shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
 
 .app-shell {
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  background: var(--cf-gray-50);
+  background:
+    radial-gradient(circle at 0% 15%, rgba(14, 165, 233, 0.08), transparent 40%),
+    radial-gradient(circle at 95% 10%, rgba(5, 150, 105, 0.1), transparent 35%),
+    var(--cf-public-shell);
 }
 
 .web-public {
@@ -28,65 +41,246 @@
   max-width: none;
 }
 
+.cabecera,
+.footer,
+.hero,
+.web-public .pagina-estandar,
+.web-public .home-modules,
+.web-public .noticias-section,
+.web-public .scoreboard-section,
+.web-public .social-section,
+.web-public .home-module,
+.web-public .equipos-section,
+.web-public .module,
+.web-public .resultados-card,
+.web-public .directo-card,
+.web-public .encuentro-item {
+  position: relative;
+}
+
+.cabecera::before,
+.hero::after,
+.web-public .pagina-estandar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cabecera {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid var(--cf-public-line) !important;
+  backdrop-filter: blur(10px);
+}
+
+.cabecera::before {
+  background:
+    linear-gradient(120deg, rgba(5, 150, 105, 0.08), transparent 35%),
+    linear-gradient(300deg, rgba(14, 165, 233, 0.07), transparent 35%);
+}
+
 .cabecera__inner,
 .footer-inner {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding-left: clamp(16px, 4vw, 48px);
-  padding-right: clamp(16px, 4vw, 48px);
+  padding-left: clamp(16px, 4vw, 52px);
+  padding-right: clamp(16px, 4vw, 52px);
   box-sizing: border-box;
 }
 
-.footer { width: 100%; }
+.cabecera__title {
+  letter-spacing: 0.16em;
+  font-size: 1.02rem;
+}
+
+.cabecera__tagline {
+  letter-spacing: 0.13em;
+}
+
+.nav__btn {
+  border-radius: 999px;
+  font-size: 0.84rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.nav__btn--active {
+  box-shadow: inset 0 0 0 1px rgba(5, 150, 105, 0.28);
+}
+
+.cabecera__cta {
+  height: 40px;
+  border-radius: 12px;
+  letter-spacing: 0.08em;
+}
+
+.hero {
+  background:
+    linear-gradient(165deg, #f4fffc 0%, #ffffff 45%, #f2f8fb 100%) !important;
+}
+
+.hero::before {
+  background:
+    radial-gradient(ellipse 45% 68% at 84% 36%, rgba(14, 165, 233, 0.11) 0%, transparent 58%),
+    radial-gradient(ellipse 35% 45% at 10% 78%, rgba(5, 150, 105, 0.12) 0%, transparent 55%);
+}
+
+.hero::after {
+  opacity: 0.2;
+  background-image: linear-gradient(var(--cf-public-line) 1px, transparent 1px), linear-gradient(90deg, var(--cf-public-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, #000 0%, #000 56%, transparent 100%);
+}
 
 .hero__inner,
 .hero__stats {
   max-width: none;
   width: 100%;
-  padding-left: clamp(20px, 4vw, 48px);
-  padding-right: clamp(20px, 4vw, 48px);
+  padding-left: clamp(20px, 4vw, 52px);
+  padding-right: clamp(20px, 4vw, 52px);
   box-sizing: border-box;
 }
 
-.historia-hero__shell {
-  max-width: none;
-  width: 100%;
-  padding-left: clamp(16px, 4vw, 48px);
-  padding-right: clamp(16px, 4vw, 48px);
-  box-sizing: border-box;
+.hero__inner {
+  padding-top: clamp(58px, 8vh, 88px);
+  gap: clamp(34px, 5vw, 66px);
+}
+
+.hero__title {
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.hero__sub {
+  max-width: 52ch;
+  color: var(--cf-gray-700);
+}
+
+.hero__visual img {
+  border-radius: 30px;
+  box-shadow: 0 20px 48px rgba(2, 132, 199, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.65);
+}
+
+.hero__stats {
+  border-top-color: rgba(15, 23, 42, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.hero__stat {
+  border-right-color: rgba(15, 23, 42, 0.1);
+}
+
+.hero__stat strong {
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .web-public .home-modules {
-  background: var(--cf-gray-50);
+  background: transparent;
+  gap: 26px;
+  padding-top: 22px;
 }
 
 .web-public .noticias-section,
 .web-public .social-section,
-.web-public .home-module {
+.web-public .home-module,
+.web-public .scoreboard-section {
   max-width: none;
   width: 100%;
-  padding-left: clamp(20px, 4vw, 48px);
-  padding-right: clamp(20px, 4vw, 48px);
+  padding-left: clamp(20px, 4vw, 52px);
+  padding-right: clamp(20px, 4vw, 52px);
   box-sizing: border-box;
 }
 
 .web-public .noticias-section,
 .web-public .social-section,
 .web-public .home-module--sponsors {
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff, #fcfefe);
+  border: 1px solid var(--cf-public-line);
+  border-radius: 26px;
+  box-shadow: var(--cf-public-shadow-soft);
 }
 
 .web-public .home-module--sponsors {
-  border-top: 1px solid var(--cf-gray-200);
-  border-bottom: 1px solid var(--cf-gray-200);
+  border-width: 1px;
+}
+
+.home-module__header h2,
+.pagina-header h1,
+.equipos-section__header h2,
+.module__header h2,
+.resultados-card__header h2,
+.directo-card__header h2 {
+  color: var(--cf-navy-900) !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+}
+
+.home-eyebrow,
+.module__eyebrow,
+.pagina-header__eyebrow,
+.equipos-section__eyebrow,
+.resultados-card__eyebrow,
+.directo-card__eyebrow,
+.cartelera-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(5, 150, 105, 0.22);
+  background: rgba(236, 253, 245, 0.86);
+  color: var(--cf-brand-700) !important;
+  letter-spacing: 0.11em;
+}
+
+.noticias-grid,
+.social-grid,
+.scoreboard-grid,
+.grid-categorias,
+.grid-jugadores,
+.lista-encuentros {
+  gap: clamp(14px, 2.2vw, 22px);
+}
+
+.noticia-card--featured,
+.noticia-card--small,
+.social-card,
+.scoreboard-card,
+.card-categoria,
+.card-jugador,
+.encuentro-item,
+.module,
+.resultados-card,
+.directo-card,
+.equipos-section,
+.historia-module-pro,
+.historia-timeline-pro,
+.historia-logro-pro,
+.historia-team-pro {
+  border-radius: 20px !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+  box-shadow: var(--cf-public-shadow-soft) !important;
+}
+
+.noticia-card--small:hover,
+.social-card:hover,
+.scoreboard-card:hover,
+.card-categoria:hover,
+.card-jugador:hover,
+.encuentro-item:hover,
+.historia-logro-pro:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--cf-public-shadow) !important;
 }
 
 .web-public .scoreboard-section {
-  width: 100%;
-  padding-left: clamp(20px, 4vw, 48px);
-  padding-right: clamp(20px, 4vw, 48px);
-  box-sizing: border-box;
+  background:
+    linear-gradient(140deg, #082532 0%, #0f3f49 45%, #0b6b56 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 26px;
+  box-shadow: 0 18px 42px rgba(8, 37, 50, 0.26);
 }
 
 .web-public .scoreboard-header,
@@ -95,28 +289,43 @@
   width: 100%;
 }
 
+.scoreboard-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.scoreboard-score {
+  background: rgba(16, 185, 129, 0.18);
+}
+
 .web-public .pagina-estandar {
   max-width: none;
   width: 100%;
-  padding: clamp(32px, 5vh, 56px) clamp(16px, 4vw, 48px) clamp(48px, 8vh, 88px);
+  padding: clamp(30px, 4.4vh, 54px) clamp(16px, 4vw, 52px) clamp(50px, 8vh, 90px);
   box-sizing: border-box;
-  background: linear-gradient(180deg, var(--cf-brand-50) 0%, #ffffff 35%, var(--cf-gray-50) 100%);
+  background: transparent;
 }
 
-.web-public .equipos-section,
-.web-public .historia-panel--light,
-.web-public .historia-info-card,
-.web-public .historia-team-card,
-.web-public .historia-goals-card {
-  background: #ffffff;
+.web-public .pagina-estandar::before {
+  inset: clamp(16px, 2.6vw, 24px);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(248, 250, 251, 0.95));
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: var(--cf-public-shadow-soft);
+  z-index: 0;
 }
 
-.web-public .historia-stack {
-  width: 100%;
-  max-width: none;
-  padding-left: clamp(16px, 4vw, 48px);
-  padding-right: clamp(16px, 4vw, 48px);
-  box-sizing: border-box;
+.web-public .pagina-estandar > * {
+  position: relative;
+  z-index: 1;
+}
+
+.pagina-header {
+  margin-bottom: clamp(12px, 2.4vh, 24px);
+}
+
+.pagina-header p {
+  color: var(--cf-gray-600);
 }
 
 .web-public .patro-carousel__content {
@@ -125,19 +334,36 @@
 }
 
 .web-public .patro-carousel__media-shade {
-  background: linear-gradient(90deg, transparent 42%, rgba(255, 255, 255, 0.97) 100%);
+  background: linear-gradient(90deg, transparent 42%, rgba(255, 255, 255, 0.96) 100%);
 }
 
-.web-public:not(.patrocinadores-pagina) .patro-carousel__count { color: var(--cf-brand-600); }
-.web-public:not(.patrocinadores-pagina) .patro-carousel__content h2 { color: var(--cf-gray-900); }
-.web-public:not(.patrocinadores-pagina) .patro-carousel__tagline { color: var(--cf-brand-600); }
-.web-public:not(.patrocinadores-pagina) .patro-carousel__desc { color: var(--cf-gray-600); }
-.web-public:not(.patrocinadores-pagina) .patro-carousel__meta { border-top-color: var(--cf-gray-200); }
-.web-public:not(.patrocinadores-pagina) .patro-carousel__meta > span { color: var(--cf-gray-500); }
+.web-public:not(.patrocinadores-pagina) .patro-carousel__count {
+  color: var(--cf-brand-700);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__content h2 {
+  color: var(--cf-gray-900);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__tagline {
+  color: var(--cf-public-accent);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__desc {
+  color: var(--cf-gray-600);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__meta {
+  border-top-color: var(--cf-gray-200);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__meta > span {
+  color: var(--cf-gray-500);
+}
 
 .web-public:not(.patrocinadores-pagina) .patro-carousel__link {
-  background: var(--cf-brand-600);
-  border-color: var(--cf-brand-600);
+  background: var(--cf-brand-700);
+  border-color: var(--cf-brand-700);
   color: #ffffff;
 }
 
@@ -156,11 +382,6 @@
   background: var(--cf-brand-50);
 }
 
-.web-public:not(.patrocinadores-pagina) .patro-carousel__thumb:hover {
-  color: var(--cf-gray-900);
-  background: var(--cf-gray-50);
-}
-
 .web-public:not(.patrocinadores-pagina) .patro-carousel__nav {
   background: rgba(255, 255, 255, 0.95);
   border-color: var(--cf-gray-200);
@@ -169,8 +390,8 @@
 }
 
 .web-public:not(.patrocinadores-pagina) .patro-carousel__nav:hover {
-  background: var(--cf-brand-600);
-  border-color: var(--cf-brand-600);
+  background: var(--cf-brand-700);
+  border-color: var(--cf-brand-700);
   color: #ffffff;
 }
 
@@ -179,28 +400,114 @@
   border: 1px solid var(--cf-gray-200);
 }
 
-.web-public:not(.patrocinadores-pagina) .patro-carousel__dot { background: var(--cf-gray-300); }
-.web-public:not(.patrocinadores-pagina) .patro-carousel__dot--active { background: var(--cf-brand-600); }
+.web-public:not(.patrocinadores-pagina) .patro-carousel__dot {
+  background: var(--cf-gray-300);
+}
+
+.web-public:not(.patrocinadores-pagina) .patro-carousel__dot--active {
+  background: var(--cf-brand-700);
+}
+
+.footer {
+  width: 100%;
+  border-top-width: 2px !important;
+}
+
+.footer::before {
+  background:
+    radial-gradient(circle at 16% 22%, rgba(5, 150, 105, 0.18) 0%, transparent 50%),
+    radial-gradient(circle at 84% 78%, rgba(14, 165, 233, 0.16) 0%, transparent 54%);
+}
+
+.footer-grid {
+  gap: clamp(24px, 3vw, 40px);
+}
+
+.footer-brand,
+.footer-col,
+.footer-newsletter {
+  animation: cf-fade-up 0.55s ease both;
+}
+
+@keyframes cf-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media (max-width: 1024px) {
   .web-public .patro-carousel__slide {
     grid-template-rows: min(42vh, 420px) auto;
   }
+
   .web-public .patro-carousel__media-shade {
     background: linear-gradient(180deg, transparent 40%, rgba(255, 255, 255, 0.97) 100%);
   }
+
   .web-public .patro-carousel__content {
     border-left: none;
     border-top: 1px solid var(--cf-gray-200);
   }
 }
 
+@media (max-width: 860px) {
+  .cabecera__nav {
+    border-radius: 0 0 18px 18px;
+    border-left: 1px solid rgba(15, 23, 42, 0.08);
+    border-right: 1px solid rgba(15, 23, 42, 0.08);
+    margin: 0 8px;
+  }
+
+  .nav__btn {
+    text-transform: none;
+  }
+}
+
 @media (max-width: 768px) {
   .hero__inner {
     grid-template-columns: 1fr;
-    padding-top: 48px;
-    padding-bottom: 32px;
+    padding-top: 52px;
+    padding-bottom: 26px;
   }
-  .hero__stats { grid-template-columns: repeat(2, 1fr); }
-  .hero__stat:nth-child(2) { border-right: none; }
+
+  .hero__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .web-public .noticias-section,
+  .web-public .social-section,
+  .web-public .home-module,
+  .web-public .scoreboard-section {
+    border-radius: 18px;
+  }
+
+  .web-public .pagina-estandar::before {
+    inset: 10px;
+    border-radius: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-brand,
+  .footer-col,
+  .footer-newsletter,
+  .social-card,
+  .noticia-card--small,
+  .scoreboard-card,
+  .card-categoria,
+  .card-jugador,
+  .encuentro-item,
+  .historia-logro-pro {
+    animation: none !important;
+    transition: none !important;
+  }
 }

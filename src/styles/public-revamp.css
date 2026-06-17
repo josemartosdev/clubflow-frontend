@@ -1,0 +1,458 @@
+/*
+  Clubflow Public Revamp
+  Override visual para dejar la web publica lista para presentacion.
+*/
+
+:root {
+  --cf-public-bg-1: #f6f8f6;
+  --cf-public-bg-2: #eef6f2;
+  --cf-public-surface: rgba(255, 255, 255, 0.9);
+  --cf-public-line: rgba(15, 23, 42, 0.08);
+  --cf-public-shadow: 0 20px 55px rgba(10, 25, 41, 0.08);
+  --cf-public-shadow-soft: 0 10px 28px rgba(10, 25, 41, 0.06);
+}
+
+body {
+  font-family: "Geist Variable", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--cf-gray-900);
+  background:
+    radial-gradient(1200px 600px at 0% -15%, rgba(52, 211, 153, 0.18), transparent 50%),
+    radial-gradient(1000px 540px at 100% -18%, rgba(14, 165, 233, 0.14), transparent 48%),
+    linear-gradient(180deg, var(--cf-public-bg-2) 0%, var(--cf-public-bg-1) 45%, #ffffff 100%);
+}
+
+.app-shell {
+  background: transparent;
+}
+
+/* Header */
+.cabecera {
+  backdrop-filter: saturate(1.25) blur(10px);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.cabecera__inner {
+  height: 76px;
+}
+
+.cabecera__badge {
+  border: 1px solid var(--cf-public-line);
+  box-shadow: 0 10px 28px rgba(12, 32, 54, 0.14);
+}
+
+.cabecera__title {
+  font-size: 0.95rem;
+  letter-spacing: 0.13em;
+}
+
+.nav__btn {
+  border: 1px solid transparent;
+}
+
+.nav__btn:hover {
+  border-color: rgba(16, 185, 129, 0.24);
+}
+
+.nav__btn--active {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.cabecera__cta {
+  letter-spacing: 0.08em;
+}
+
+/* Home hero */
+.web-public--home .hero {
+  border-bottom: 1px solid var(--cf-public-line);
+  background:
+    radial-gradient(700px 330px at 86% 18%, rgba(16, 185, 129, 0.2), transparent 63%),
+    radial-gradient(740px 360px at 10% 90%, rgba(14, 165, 233, 0.12), transparent 62%),
+    linear-gradient(155deg, #f7fcfa 0%, #eef7f3 48%, #f9fcff 100%);
+}
+
+.web-public--home .hero__inner {
+  padding-top: clamp(52px, 7vw, 86px);
+  padding-bottom: clamp(34px, 6vw, 56px);
+  gap: clamp(28px, 6vw, 76px);
+}
+
+.web-public--home .hero__eyebrow {
+  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+}
+
+.web-public--home .hero__title {
+  font-size: clamp(2.4rem, 5.4vw, 4.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.web-public--home .hero__sub {
+  max-width: 56ch;
+  font-size: 1.04rem;
+}
+
+.web-public--home .hero__visual img {
+  border-radius: 30px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transform-origin: center;
+  animation: cfFloatIn 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.web-public--home .hero__stats {
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  border-top: none;
+  background: transparent;
+}
+
+.web-public--home .hero__stat {
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: var(--cf-public-shadow-soft);
+}
+
+.web-public--home .hero__stat strong {
+  font-size: 2rem;
+}
+
+/* Sections */
+.web-public .home-modules {
+  position: relative;
+  isolation: isolate;
+  gap: 0;
+  background: transparent;
+}
+
+.web-public .home-modules::before {
+  content: "";
+  position: absolute;
+  inset: 30px 0 auto;
+  height: 180px;
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(52, 211, 153, 0.06), transparent);
+}
+
+.web-public .home-module,
+.web-public .noticias-section,
+.web-public .social-section,
+.web-public .scoreboard-section {
+  animation: cfReveal 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.web-public .noticias-section {
+  animation-delay: 80ms;
+}
+
+.web-public .scoreboard-section {
+  animation-delay: 140ms;
+}
+
+.web-public .social-section {
+  animation-delay: 220ms;
+}
+
+.web-public .home-module--sponsors {
+  animation-delay: 280ms;
+}
+
+.web-public .home-module,
+.web-public .noticias-section,
+.web-public .social-section {
+  border-top: 1px solid var(--cf-public-line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.92));
+}
+
+.web-public .home-module__header h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: -0.03em;
+  text-transform: none;
+}
+
+.web-public .home-eyebrow {
+  font-size: 0.69rem;
+  letter-spacing: 0.2em;
+}
+
+/* Noticias */
+.web-public .noticias-grid {
+  gap: 18px;
+}
+
+.web-public .noticia-card--featured {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: var(--cf-public-shadow);
+}
+
+.web-public .noticia-overlay {
+  padding: clamp(28px, 4vw, 44px) clamp(18px, 2.6vw, 30px) 26px;
+  background: linear-gradient(180deg, transparent 10%, rgba(0, 0, 0, 0.86));
+}
+
+.web-public .noticia-card--featured .noticia-title {
+  font-size: clamp(1.28rem, 2.8vw, 2.05rem);
+  letter-spacing: -0.015em;
+}
+
+.web-public .noticia-card--small {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: var(--cf-public-shadow-soft);
+}
+
+/* Resultados */
+.web-public .scoreboard-section {
+  background:
+    radial-gradient(650px 280px at 15% 3%, rgba(16, 185, 129, 0.21), transparent 67%),
+    linear-gradient(145deg, #10253f 0%, #163554 42%, #0f4f45 100%);
+}
+
+.web-public .scoreboard-grid {
+  gap: 14px;
+}
+
+.web-public .scoreboard-card {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+}
+
+.web-public .scoreboard-score {
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+/* Redes */
+.web-public .social-grid {
+  gap: 16px;
+}
+
+.web-public .social-card {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: var(--cf-public-shadow-soft);
+  border-radius: 18px;
+}
+
+.web-public .social-card__header {
+  min-height: 68px;
+  padding: 14px 18px;
+}
+
+.web-public .social-card__body {
+  padding: 20px;
+}
+
+.web-public .social-card__platform {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.web-public .social-card__user {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.web-public .social-card__likes {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--cf-brand-50);
+  color: var(--cf-brand-700);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Subpages */
+.web-public .pagina-estandar {
+  background:
+    radial-gradient(820px 290px at 50% -8%, rgba(16, 185, 129, 0.14), transparent 72%),
+    linear-gradient(180deg, #fbfefc 0%, #ffffff 34%, #f6faf8 100%);
+}
+
+.web-public .pagina-header h1 {
+  letter-spacing: -0.03em;
+}
+
+.web-public .pagina-header p {
+  font-size: 1.04rem;
+}
+
+.web-public .equipos-section,
+.web-public .module,
+.web-public .resultados-card,
+.web-public .directo-card,
+.web-public .calendario-grid,
+.web-public .tabla-posiciones {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: var(--cf-public-shadow-soft);
+  border-radius: 20px;
+  background: var(--cf-public-surface);
+  backdrop-filter: blur(5px);
+}
+
+.web-public .card-categoria,
+.web-public .card-jugador,
+.web-public .encuentro-item,
+.web-public .partido-card,
+.web-public .resultado-item,
+.web-public .equipo-card,
+.web-public .patrocinador-card {
+  border-radius: 14px;
+}
+
+.web-public .card-jugador {
+  border-color: rgba(16, 185, 129, 0.34);
+}
+
+.web-public .cartelera-partido {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 45px rgba(2, 10, 20, 0.26);
+}
+
+/* Historia */
+.web-public--historia .historia-stack > * {
+  animation: cfReveal 680ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.web-public--historia .historia-stack > *:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.web-public--historia .historia-stack > *:nth-child(3) {
+  animation-delay: 140ms;
+}
+
+/* Patrocinadores */
+.web-public.patrocinadores-pagina .patro-solo-hero {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.web-public.patrocinadores-pagina .patro-carousel--solo .patro-carousel__panel {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(52, 211, 153, 0), rgba(52, 211, 153, 0.95), rgba(56, 189, 248, 0.7), rgba(52, 211, 153, 0));
+}
+
+.footer-title {
+  letter-spacing: 0.06em;
+}
+
+.footer-col h3 {
+  letter-spacing: 0.12em;
+}
+
+.footer-newsletter .newsletter-input {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.footer-newsletter .newsletter-btn {
+  letter-spacing: 0.12em;
+}
+
+/* Motion */
+@keyframes cfReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cfFloatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .web-public .home-module,
+  .web-public .noticias-section,
+  .web-public .social-section,
+  .web-public .scoreboard-section,
+  .web-public--historia .historia-stack > *,
+  .web-public--home .hero__visual img {
+    animation: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .web-public .hero__title {
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+  }
+
+  .web-public .social-card__header {
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cabecera__inner {
+    height: 68px;
+  }
+
+  .web-public .home-module,
+  .web-public .noticias-section,
+  .web-public .social-section,
+  .web-public .scoreboard-section {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+
+  .web-public--home .hero__inner {
+    text-align: left;
+  }
+
+  .web-public--home .hero__content {
+    align-items: flex-start;
+  }
+
+  .web-public--home .hero__ctas {
+    justify-content: flex-start;
+  }
+
+  .web-public--home .hero__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .web-public--home .hero__stat:nth-child(2) {
+    border-right: 1px solid rgba(15, 23, 42, 0.07);
+  }
+}
+
+@media (max-width: 520px) {
+  .web-public .btn-primary,
+  .web-public .btn-ghost,
+  .web-public .btn-secondary {
+    width: 100%;
+  }
+
+  .web-public .hero__ctas {
+    width: 100%;
+  }
+}
