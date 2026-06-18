@@ -2,7 +2,7 @@
  * Mismo patrón que SRM Compras (srm-compras-front/src/services/apiClient.js).
  */
 const DEFAULT_LOCAL_API = "http://127.0.0.1:8000/api";
-const RAILWAY_API = "https://clubflow-back-production.up.railway.app/api";
+const RAILWAY_API = "https://cv-berja-back-production.up.railway.app/api";
 
 function resolveApiBase() {
   const configured = import.meta.env.VITE_API_URL?.trim();
