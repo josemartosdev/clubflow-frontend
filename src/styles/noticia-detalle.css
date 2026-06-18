@@ -5,7 +5,8 @@
 }
 
 .web-public--noticia .noticia-detalle {
-  max-width: 980px;
+  max-width: none;
+  width: 100%;
   gap: 20px;
 }
 
