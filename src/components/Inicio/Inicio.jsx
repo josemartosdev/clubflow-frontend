@@ -4,6 +4,8 @@ import ResultadosCarousel from "./ResultadosCarousel";
 import Noticias from "./Noticias";
 import RedesSociales from "./RedesSociales";
 import { CLUB } from "../../config/club";
+import PhotoShowcase from "../ui/PhotoShowcase";
+import { pagePhotoSets, publicPhotos } from "../../data/publicPhotos";
 
 const stats = [
   { value: CLUB.founded, label: "Fundado" },
@@ -33,7 +35,7 @@ function Inicio() {
             </div>
           </div>
           <div className="hero__visual">
-            <img src={`${import.meta.env.BASE_URL}img/hero-football.svg`} alt="Campo de fútbol Clubflow FC" />
+            <img src={publicPhotos.hero} alt="Jugadores del Clubflow FC en el campo" />
           </div>
         </div>
         <div className="hero__stats">
@@ -45,6 +47,14 @@ function Inicio() {
           ))}
         </div>
       </div>
+
+      <PhotoShowcase
+        className="photo-showcase--home"
+        eyebrow="Galería"
+        title="Clubflow en imágenes"
+        subtitle="Entrenamientos, convivencia y competición en una misma temporada."
+        photos={pagePhotoSets.home}
+      />
 
       <div className="home-modules">
         <Noticias />

@@ -159,3 +159,98 @@ body {
   font-family: var(--heading), system-ui, -apple-system, sans-serif !important;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Galeria visual reutilizable para paginas publicas */
+.photo-showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin: 6px 0 4px;
+  padding: clamp(16px, 2.5vw, 24px);
+  border-radius: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(16, 185, 129, 0.18), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 251, 250, 0.98));
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.09);
+}
+
+.photo-showcase__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 72ch;
+}
+
+.photo-showcase__eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(5, 150, 105, 0.1);
+  border: 1px solid rgba(5, 150, 105, 0.24);
+  color: var(--cf-brand-700);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.photo-showcase__copy h2 {
+  margin: 0;
+  font-size: clamp(1.38rem, 2.3vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--cf-navy-900);
+}
+
+.photo-showcase__copy p {
+  margin: 0;
+  color: var(--cf-gray-600);
+}
+
+.photo-showcase__grid {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 12px;
+}
+
+.photo-showcase__item {
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 150px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.12);
+}
+
+.photo-showcase__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.photo-showcase__item:hover img {
+  transform: scale(1.04);
+}
+
+.photo-showcase__item--main {
+  grid-row: span 2;
+  min-height: 320px;
+}
+
+@media (max-width: 920px) {
+  .photo-showcase__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-showcase__item--main {
+    grid-row: auto;
+    min-height: 250px;
+  }
+
+  .photo-showcase__item {
+    min-height: 170px;
+  }
+}
