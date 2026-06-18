@@ -4,8 +4,7 @@ import ResultadosCarousel from "./ResultadosCarousel";
 import Noticias from "./Noticias";
 import RedesSociales from "./RedesSociales";
 import { CLUB } from "../../config/club";
-import PhotoShowcase from "../ui/PhotoShowcase";
-import { pagePhotoSets, publicPhotos } from "../../data/publicPhotos";
+import { publicPhotos } from "../../data/publicPhotos";
 
 const stats = [
   { value: CLUB.founded, label: "Fundado" },
@@ -47,14 +46,6 @@ function Inicio() {
           ))}
         </div>
       </div>
-
-      <PhotoShowcase
-        className="photo-showcase--home"
-        eyebrow="Galería"
-        title="Clubflow en imágenes"
-        subtitle="Entrenamientos, convivencia y competición en una misma temporada."
-        photos={pagePhotoSets.home}
-      />
 
       <div className="home-modules">
         <Noticias />

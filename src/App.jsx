@@ -7,6 +7,7 @@ import PartidoDetallePage from "./pages/PartidoDetallePage";
 import ResultadosPage from "./pages/ResultadosPage";
 import CalendarioPage from "./pages/CalendarioPage";
 import EnDirectoPage from "./pages/EnDirectoPage";
+import NoticiaDetallePage from "./pages/NoticiaDetallePage";
 import Login from "./pages/Login";
 import PatrocinadoresPage from "./pages/PatrocinadoresPage";
 import GestionLayout from "./layouts/GestionLayout";
@@ -35,6 +36,7 @@ import './styles/historia-pro.css'
 import './styles/patrocinadores-pro.css'
 import './styles/formation-pitch.css'
 import './styles/partido-detalle.css'
+import './styles/noticia-detalle.css'
 import './styles/equipos-explorer.css'
 import './styles/partidos-calendario.css'
 
@@ -49,6 +51,7 @@ function App() {
         <Route path="/equipos" element={<EquiposPage />} />
         <Route path="/partidos" element={<PartidosPage />} />
         <Route path="/partidos/:id" element={<PartidoDetallePage />} />
+        <Route path="/noticias/:slug" element={<NoticiaDetallePage />} />
         <Route path="/resultados" element={<ResultadosPage />} />
         <Route path="/en-directo" element={<EnDirectoPage />} />
         <Route path="/calendario" element={<CalendarioPage />} />
